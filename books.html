@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KydZoo - Books Page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <!-- Custom Script -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <div id="loader" class="loader">
+    <img src="/assets/images/kydzoologo.png" alt="Loading...">
+</div>
+
+<script>
+  // Loader
+  window.addEventListener("load", function () {
+  // Hide loader
+  document.getElementById("loader").style.display = "none";
+  // Show content
+  document.querySelector(".content").style.display = "block";
+});
+</script>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg  sticky-top">
+    <div class="container-fluid p-100">
+      <a class="navbar-brand" href="/index.html">
+        <img src="/assets/images/kydzoologo.png" alt="Logo" class="logo-img"> 
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/books.html">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact Us</a>
+          </li>
+        </ul>
+     
+        <div class="ml-auto d-flex align-items-center">
+            <a href="/profile" class="user-icon ml-5">
+                <img src="assets/images/user-icon.svg" alt="User Icon" class="user-icon-img">
+              </a> 
+              <div class="language-selector">
+                <select>
+                  <option value="EN">EN</option>
+                  <option value="AR">AR</option>
+                </select>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+<!-- Header Section -->
+<section class="header-bg">
+    <div class="container-fluid p-100">
+    <div class="header-section">
+        <div class="overlay"></div>
+        <div class="header-content">
+          <p class="small-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+            Home 
+            <img src="/assets/images/smallchervon left.svg" alt="Arrow" class="breadcrumb-arrow"> 
+            Books
+          </p>
+          <h1 class="header-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Books</h1>
+          <p class="header-subtitle"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Discover a Range of Books Designed to Enhance Your Skills and Knowledge</p>
+        </div>
+      </div>
+    </div>
+  </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+<!-- Cards and Catecory Section-->
+  <section class="buy-now-section ">
+  <div class="container-fluid p-100">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="category-section ">
+                <h5 class="mb-2 d-flex justify-content-between align-items-center"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                    <span>Category</span>
+                    <img src="/assets/images/drop-icon-category.svg" alt="Drop Up Icon" class="drop-icon-category">
+                </h5>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="all" value="all" checked>
+                        <label class="form-check-label" for="all">All</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="anxiety-trauma" value="Anxiety & Trauma">
+                        <label class="form-check-label" for="anxiety-trauma">Anxiety & Trauma</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="mental-health" value="Mental Health">
+                        <label class="form-check-label" for="mental-health">Mental Health</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="parenting" value="Parenting">
+                        <label class="form-check-label" for="parenting">Parenting</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="for-educators" value="For Educators">
+                        <label class="form-check-label" for="for-educators">For Educators</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="neurodiversity" value="Neurodiversity">
+                        <label class="form-check-label" for="neurodiversity">Neurodiversity</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="child-development" value="Child Development">
+                        <label class="form-check-label" for="child-development">Child Development</label>
+                    </li>
+                    <li class="list-group-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <input class="form-check-input me-2 checkbox-custom" type="checkbox" id="play-therapy" value="Play Therapy & Counselling">
+                        <label class="form-check-label" for="play-therapy">Play Therapy & Counselling</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- Right Section for Courses -->
+        <div class="col-md-9 buy-now-cards">
+            <h5 class="showing-text"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">showing: 1 - 15 of 200 products</h5>
+            <div class="row">
+                <!-- Course Card -->
+                <div class="col-md-4 mb-4 ">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 ">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="buy-now-card">
+                        <img src="/assets/images/bookscard.png" class="buy-img-card"  alt="Course Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+                        <div class="buy-now-card-body">
+                            <h5 class="buy-now-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">E-Book Name</h5>
+                            <p class="buy-now-desc"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Proin aliquet faucibus arcu malesuada sed.</p>
+                            <h5 class="buy-now-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
+                            <a href="#" class="buy-now-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+                            <a href="#" class="buynow-see-details"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">See Details</a>
+                        </div>
+                    </div>
+                </div>
+           
+                <!-- Repeat the above div for more cards -->
+            </div>
+      
+
+      <!-- Pagination Section -->
+                <nav aria-label="Page navigation" class="custom-pagination">
+                  <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                          <div class="page-link-arrow" href="#"><img src="/assets/images/2angleleft.svg" alt="Previous" data-aos="fade-up" data-aos-duration="400" data-aos-offset="10"></div>
+                      </li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10"><a class="page-link page-number active" href="#">1</a></li> 
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="600" data-aos-offset="10"><a class="page-link page-number" href="#">2</a></li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="700" data-aos-offset="10"><a class="page-link page-number" href="#">3</a></li>
+                      <li class="page-item disabled"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10"><span class="page-link">...</span></li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><a class="page-link page-number" href="#">8</a></li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="1100" data-aos-offset="10"><a class="page-link page-number" href="#">9</a></li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="1200" data-aos-offset="10"><a class="page-link page-number" href="#">10</a></li>
+                      <li class="page-item"data-aos="fade-up" data-aos-duration="1300" data-aos-offset="10">
+                          <div class="page-link-arrow" href="#"><img src="/assets/images/2angelright.svg" alt="Next" data-aos="fade-up" data-aos-duration="1400" data-aos-offset="10"></div>
+                      </li>
+                  </ul>
+                </nav>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const pageLinks = document.querySelectorAll('.page-number');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+           
+            pageLinks.forEach(link => link.classList.remove('active'));
+
+        
+            this.classList.add('active');
+        });
+    });
+});
+
+
+</script>
+
+
+
+
+
+
+  
+<!-- Footer -->
+<div class="footer-section">
+  <footer class="footer-container p-100">
+    <div class="top-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="footer-logo">
+              <a class="navbar-brand" href="/index.html">
+                <img src="/assets/images/kydzoologo.png" alt="Logo" class="logo-img"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10"> 
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 data-aos="fade-up" data-aos-duration="500" data-aos-offset="10" class="footer-heading">Explore</h5>
+            <div class="row">
+              <div class="col">
+                <a href="/about" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">About Us</a>
+                <a href="/events" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Events</a>
+                <a href="/courses" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Courses</a>
+                <a href="/books" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Books</a>
+                <a href="/blog" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Blog</a>
+              </div>
+              <div class="col">
+                <a href="/contact" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Contact Us</a>
+                <a href="/login" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Login</a>
+                <a href="/signup" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">Signup</a>
+                <a href="/account" class="footer-link d-block mb-3"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">My Account</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-left footer-heading-contact"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+            <h5 >Contact</h5>
+            <p>
+              <img src="/assets/images/mobile-footer-icon.png" alt="Phone Icon" class="mobile-footer-icon"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+              0033885918767
+            </p>
+            <p>
+              <img src="/assets/images/iconoir_mail.png" alt="Email Icon" class="email-footer-icon"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+              kydzzo2022@gmail.com
+            </p>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank">
+                <img src="/assets/images/facebook icon.png" alt="Facebook"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+              </a>
+              <a href="https://telegram.org" target="_blank">
+                <img src="/assets/images/send icon.png" alt="Telegram" data-aos="fade-up" data-aos-duration="600" data-aos-offset="10">
+              </a>
+              <a href="https://twitter.com" target="_blank">
+                <img src="/assets/images/twitter icon.png" alt="Twitter" data-aos="fade-up" data-aos-duration="700" data-aos-offset="10">
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <img src="/assets/images/instagram icon.png" alt="Instagram" data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">
+              </a>
+              <a href="https://youtube.com" target="_blank">
+                <img src="/assets/images/youtube icon.png" alt="YouTube" data-aos="fade-up" data-aos-duration="900" data-aos-offset="10">
+              </a>
+              <a href="https://tiktok.com" target="_blank">
+                <img src="/assets/images/music icon.png" alt="TikTok" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="bottom-section">
+      <div class="container-fluid p-100">
+        <div class="row">
+          <div class="col-md-4 text-left-footer">
+            © 2024 Kydzzo | All Rights Reserved
+          </div>
+          <div class="col-md-4 text-center-footer">
+            <span>Developed & Designed By <a href="https://intcore.com">INTCORE</a></span>
+          </div>
+          <div class="col-md-4 text-right-footer">
+            <span> <a href="/privacy-policy">Privacy Policy</a></span>
+            <span>| <a href="/terms-of-use">Terms of Use</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+
+  
+  
+  
+  
+  
+    
+  
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
+<!-- Slick Slider -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- mmenu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.13/mmenu.min.js"></script>
+
+<!-- Nice Select & Wow & Parallax -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/wow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+<!-- GSAP (for loading page) -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+<!-- FancyBox (for image or video popup) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Xk/5uHBm6F59Ecf7DzN93ewP2eRTtM0NFdQUz3xv2d+1V/kd+ufPQyM4o5XzY0/ymuwVp6LMTPhvquKeXilrMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Waypoints & CounterUp (for animation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script src="./assets/js/jquery.counterup.min.js"></script>
+
+<!-- Swiper Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+
+<!-- Main Script -->
+<script src="/js/main.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+        AOS.init();
+</script>
+
+</body>
+</html>
