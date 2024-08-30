@@ -40,7 +40,7 @@ img {
 a,
 button {
   transition: all 0.3s ease-in-out;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 ul,
 ol {
@@ -627,6 +627,7 @@ input::-webkit-inner-spin-button {
 .view-all-courses:hover {
   background-color: #810f40;
   color: #ffffff;
+  text-decoration: none;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -775,6 +776,7 @@ input::-webkit-inner-spin-button {
 .view-all-books:hover {
   background-color: #810f40;
   color: #ffffff;
+  text-decoration: none;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -1017,6 +1019,7 @@ input::-webkit-inner-spin-button {
 .view-our-events:hover {
   background-color: #ffffff;
   color: #810f40;
+  text-decoration: none;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
