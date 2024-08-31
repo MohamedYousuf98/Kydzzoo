@@ -92,7 +92,11 @@ input::-webkit-inner-spin-button {
 .back-to-top:hover i {
   color: #810f40;
 }
-
+@media (max-width: 768px) {
+  .back-to-top {
+    display: none !important;
+  }
+}
 .p-100 {
   padding-left: 100px !important;
   padding-right: 100px !important;
@@ -1693,7 +1697,7 @@ input::-webkit-inner-spin-button {
   color: #1b2617;
 }
 .phone-number {
-  color: #1B2617;
+  color: #1b2617;
   text-decoration: underline;
 }
 
