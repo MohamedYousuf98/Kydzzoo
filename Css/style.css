@@ -2538,7 +2538,9 @@ input::-webkit-inner-spin-button {
     font-size: 30px;
   }
   .header-bookinner-subtitle {
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .text-secbook-inner h2 {
     font-size: 30px;
