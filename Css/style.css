@@ -21,8 +21,7 @@ body {
   }
   .book-release-section {
     overflow-x: hidden !important;
-  overflow-y: hidden !important;
-
+    overflow-y: hidden !important;
   }
 }
 
@@ -3599,8 +3598,8 @@ iframe {
   font-weight: 400;
 }
 .submit-btn-Adetails:hover {
-  background-color: #6a172f;
-  color: white;
+  background-color: #b74f80;
+  color: #810f40;
 }
 
 .change-password-btn-Adetails {
