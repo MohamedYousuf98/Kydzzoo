@@ -126,62 +126,24 @@
   </div>
   
   
-  <script>
-    $(document).ready(function () {
-      $(".brands").slick({
-        slidesToShow: 5, 
-        slidesToScroll: 1,
-        infinite: true,
-        autoplay: false,
-        dots: false,
-        arrows:false,
-        responsive: [
-          {
-            breakpoint: 1024, 
-            settings: {
-              slidesToShow: 4, 
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            }
-          }
-        ]
-      });
   
-      // Custom navigation
-      $('.prev-brands-arrow').click(function() {
-        $('.brands').slick('slickPrev');
-      });
-  
-      $('.next-brands-arrow').click(function() {
-        $('.brands').slick('slickNext');
-      });
-    });
-  </script>
   
 
 
 <!--Book Release-->
 <section class="book-release-section">
   <div class="container-fluid p-130">
-    <div class="book-release-container">
+    <div class="book-release-container"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <!-- Book Image Container -->
       <div class="book-image-container">
-        <img src="/assets/images/BookRelease.png" alt="The Parenting Handbook" class="book-image" data-aos="fade-right" data-aos-duration="1100" data-aos-offset="10">
+        <img src="/assets/images/BookRelease.png" alt="The Parenting Handbook" class="book-image" >
       </div>
       <!-- Content Container -->
       <div class="content-container">
-        <h3 class="new-release-text" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10">NEW BOOK RELEASE</h3>
-        <p class="sub-text-release" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10">Authored By The Co-Founder Of <br><span class="highlighted-text">KYDZZO</span></p>
+        <h3 class="new-release-text" >NEW BOOK RELEASE</h3>
+        <p class="sub-text-release" >Authored By The Co-Founder Of <br><span class="highlighted-text">KYDZZO</span></p>
         <div class="button-container">
-          <a href="#" class="btn btn-custom-primary" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10">Get Your Copy Now</a>
+          <a href="#" class="btn btn-custom-primary" >Get Your Copy Now</a>
         </div>
       </div>
     </div>
@@ -198,34 +160,34 @@
 <div class="container-fluid p-100">
   <div class="events-header mb-4">
     <div class="prev-events-arrow">
-      <img src="/assets/images/chervonleft-black.png" alt="Previous"data-aos="fade-left" data-aos-duration="1100" data-aos-offset="10">
+      <img src="/assets/images/chervonleft-black.png" alt="Previous">
     </div>
     <div class="header-content-events ">
-      <h2 data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">Courses</h2>
-      <p data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">Join Our Upcoming Events and Stay Connected!</p>
+      <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Courses</h2>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Join Our Upcoming Events and Stay Connected!</p>
     </div>
     <div class="next-events-arrow">
-      <img src="/assets/images/chervon-right-black.png" alt="Next"data-aos="fade-right" data-aos-duration="1100" data-aos-offset="10">
+      <img src="/assets/images/chervon-right-black.png" alt="Next">
     </div>
   </div>
   <div class="courses-slider row">
-    <div class="col-lg-4 col-md-6 mb-2">
-      <div class="card-courses" data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+    <div class="col-lg-4 col-md-6 mb-2"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+      <div class="card-courses" >
         <div class="badge">NEW</div>
         <img src="/assets/images/course1.png" alt="Course 1">
         <h3>Understanding the Two Age Stages of a Child: 0-5 Ye...</h3>
         <p>$50.00</p>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-      <div class="card-courses"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">
+    <div class="col-lg-4 col-md-6 mb-2"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">
+      <div class="card-courses">
         <img src="/assets/images/course2.png" alt="Course 2">
         <h3>Understanding the Two-Age Stages of Child Development</h3>
         <p>$39.99</p>
       </div>
     </div>
-    <div class="col-lg-4 col-md-6 mb-2">
-      <div class="card-courses"data-aos="fade-up" data-aos-duration="1100" data-aos-offset="10">
+    <div class="col-lg-4 col-md-6 mb-2"data-aos="fade-up" data-aos-duration="1100" data-aos-offset="10">
+      <div class="card-courses">
         <div class="badge">NEW</div>
         <img src="/assets/images/course3.png" alt="Course 3">
         <h3>Training on How to Deal with a Stubborn/Angry Child</h3>
@@ -257,54 +219,12 @@
     </div>
   </div>
   <div class="d-flex justify-content-center">
-    <a href="/CourseInnerPage.html" class="view-all-courses" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">View All Courses</a>
+    <a href="/CourseInnerPage.html" class="view-all-courses">View All Courses</a>
   </div>
   
 </div>
 </div>
 
-
-
-
-<script>
-  $(document).ready(function () {
-    $(".courses-slider").slick({
-      slidesToShow: 3, // Default number of slides to show
-      slidesToScroll: 1,
-      infinite: true,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 1024, // For tablets and smaller desktops
-          settings: {
-            slidesToShow: 2, // Show 2 slides at a time for tablets
-            slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 600, // For mobile devices
-          settings: {
-            slidesToShow: 1, // Show 1 slide at a time on mobile devices
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-          }
-        }
-      ]
-    });
-
-  // Custom navigation
-  $('.prev-events-arrow').click(function() {
-  $('.courses-slider').slick('slickPrev');
-  });
-
-  $('.next-events-arrow').click(function() {
-    $('.courses-slider').slick('slickNext');
-  });
-  });
-
- 
-  </script>
 
 
 
@@ -323,84 +243,27 @@
     <!-- Slider Content -->
     <div class="OurBooks-slider-container d-flex justify-content-center align-items-center position-relative">
       <div class="prev-arrow-books position-absolute">
-        <img src="/assets/images/chervon-left-books.svg" alt="Previous" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10"/>
+        <img src="/assets/images/chervon-left-books.svg" alt="Previous"/>
       </div>
       <div class="OurBooks-slider mb-1">
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book1.png" alt="First Slide" class="OurBooksSlide-img" /></div>
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book2.png" alt="Second Slide" class="OurBooksSlide-img" /></div>
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book3.png" alt="Third Slide" class="OurBooksSlide-img" /></div>
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book2.png" alt="Fourth Slide" class="OurBooksSlide-img" /></div>
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book1.png" alt="Fifth Slide" class="OurBooksSlide-img" /></div>
-        <div class="slide-item"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book3.png" alt="Fifth Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="600" data-aos-offset="10"><img src="/assets/images/book1.png" alt="First Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10"><img src="/assets/images/book2.png" alt="Second Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><img src="/assets/images/book3.png" alt="Third Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="1200" data-aos-offset="10"><img src="/assets/images/book2.png" alt="Fourth Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="1400" data-aos-offset="10"><img src="/assets/images/book1.png" alt="Fifth Slide" class="OurBooksSlide-img" /></div>
+        <div class="slide-item"data-aos="fade-up" data-aos-duration="1600" data-aos-offset="10"><img src="/assets/images/book3.png" alt="Fifth Slide" class="OurBooksSlide-img" /></div>
       </div>
       <div class="next-arrow-books position-absolute">
-        <img src="/assets/images/chervon-right-books.svg" alt="Next" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="10"/>
+        <img src="/assets/images/chervon-right-books.svg" alt="Next" />
       </div>
     </div>
     <div class="d-flex justify-content-center mb-3">
-      <a href="/Book_InnerPage.html" class="view-all-books"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">View All Books</a>
+      <a href="/Book_InnerPage.html" class="view-all-books">View All Books</a>
     <div class="custom-dots "></div>
   </div>
   </div>
 </div>
 
-
-
-
-<script>
-  $(document).ready(function(){
-    // Initialize the slider with default settings
-    function initializeSlider() {
-      $('.OurBooks-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3, // Default: Show 3 slides at a time
-        slidesToScroll: 1,
-        nextArrow: $('.next-arrow-books'),
-        prevArrow: $('.prev-arrow-books'),
-        customPaging: function (slider, i) {
-            return '<div class="dot"></div>';
-        },
-        dotsClass: 'custom-dots',
-        autoplay: false, // Enable autoplay
-        autoplaySpeed: 3000 // Autoplay speed in milliseconds
-      });
-    }
-
-    // Update slider settings based on window width
-    function updateSliderSettings() {
-      if ($(window).width() <= 768) {
-        $('.OurBooks-slider').slick('slickSetOption', {
-          slidesToShow: 1, // Show one slide at a time on mobile
-          autoplay: true, // Ensure autoplay is enabled
-          autoplaySpeed: 3000 // Autoplay speed in milliseconds
-        }, true);
-      } else {
-        $('.OurBooks-slider').slick('slickSetOption', {
-          slidesToShow: 3, // Show three slides at a time on larger screens
-          autoplay: true, // Ensure autoplay is enabled
-          autoplaySpeed: 3000 // Autoplay speed in milliseconds
-        }, true);
-      }
-    }
-
-    // Initialize the slider
-    initializeSlider();
-
-    // Update slider settings on window resize with debounce
-    let resizeTimeout;
-    $(window).on('resize', function() {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(function() {
-        updateSliderSettings();
-      }, 200); // Adjust the debounce time as needed
-    });
-
-    // Initial update
-    updateSliderSettings();
-  });
-</script>
 
 
 
@@ -410,20 +273,20 @@
 <div class="container-fluid p-100">    
   <div class="events-header mt-5">
     <div class="prev-events-arrow">
-      <img src="/assets/images/chervonleft-black.png" alt="Previous"data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10">
+      <img src="/assets/images/chervonleft-black.png" alt="Previous">
     </div>
     <div class="header-content-events">
       <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Events</h2>
       <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Join Our Upcoming Events and Stay Connected!</p>
     </div>
     <div class="next-events-arrow">
-      <img src="/assets/images/chervon-right-black.png" alt="Next"data-aos="fade-right" data-aos-duration="1000" data-aos-offset="10">
+      <img src="/assets/images/chervon-right-black.png" alt="Next">
     </div>
   </div>
 
   <div class="slider-container">
     <div class="events-slider">
-      <div class="event-card"data-aos="fade-up" data-aos-duration="400" data-aos-offset="10">
+      <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/events1.png" alt="Event 1">
         <div class="content-event-slider">
           <h3>Event</h3>
@@ -431,7 +294,7 @@
           <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
         </div>
       </div>
-      <div class="event-card"data-aos="fade-up" data-aos-duration="500" data-aos-offset="10">
+      <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/events2.png" alt="Event 2">
         <div class="content-event-slider">
           <h3>Event</h3>
@@ -440,7 +303,7 @@
         </div>
       </div>
 
-    <div class="event-card"data-aos="fade-up" data-aos-duration="600" data-aos-offset="10">
+    <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events3.png" alt="Event 2">
       <div class="content-event-slider">
         <h3>Event</h3>
@@ -448,7 +311,7 @@
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
-    <div class="event-card"data-aos="fade-up" data-aos-duration="700" data-aos-offset="10">
+    <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events5.png" alt="Event 3">
       <div class="content-event-slider">
         <h3>Event</h3>
@@ -456,7 +319,7 @@
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
-    <div class="event-card"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">
+    <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events6.png" alt="Event 4">
       <div class="content-event-slider">
         <h3>Event</h3>
@@ -464,7 +327,7 @@
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
-    <div class="event-card"data-aos="fade-up" data-aos-duration="900" data-aos-offset="10">
+    <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events3.png" alt="Event 5">
       <div class="content-event-slider">
         <h3>Event</h3>
@@ -482,62 +345,28 @@
     </div>
   </div>
   <div class="d-flex justify-content-center mt-5 ">
-    <a href="/Events_InnerPage.html"class="view-our-events"data-aos="zoom-in" data-aos-duration="1100" data-aos-offset="10">View our events</a>
+    <a href="/Events_InnerPage.html"class="view-our-events">View our events</a>
  </div>
 </div>
 </div>
 
 
 
-<script>
-$(document).ready(function(){
-  // Initialize Slick Slider
-  $('.events-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false, // Disable default arrows
-    dots: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-        }
-      }
-    ]
-  });
-
-  // Custom navigation
-  $('.prev-events-arrow').click(function() {
-    $('.events-slider').slick('slickPrev');
-  });
-
-  $('.next-events-arrow').click(function() {
-    $('.events-slider').slick('slickNext');
-  });
-});
-
-</script>
-
 <!--Vedio Section-->
 <section class="container-fluid p-100 ">
-  <div class="video-section ">
+  <div class="video-section "data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
     <div class="video-container">
-      <div class="video-overlay"data-aos="fade-up" data-aos-duration="900" data-aos-offset="10">
+      <div class="video-overlay"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <div class="play-button" onclick="openVideoModal()">
           <img src="/assets/images/vedio-icon.png" alt="Play Button" >
         </div>
       </div>
     </div>
     <div class="description-vedio">
-      <p data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Mattis justo bibendum nascetur habitasse vitae suspendisse.
+      <p >Lorem ipsum dolor sit amet consectetur. Mattis justo bibendum nascetur habitasse vitae suspendisse.
        </p>
         <div class="d-flex justify-content-center mt-5 ">
-          <a href="" class="join-youtube-channel"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">Join Youtube Channel</a>
+          <a href="" class="join-youtube-channel">Join Youtube Channel</a>
       </div>
     </div>
   </div>
@@ -556,34 +385,6 @@ $(document).ready(function(){
 
 
 
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  var modal = document.getElementById("videoModal");
-  var videoFrame = document.getElementById("videoFrame");
-
-  // Ensure the modal is hidden initially
-  modal.style.display = "none";
-
-  window.openVideoModal = function() {
-    if (modal.style.display === "none") { // Only open if not already visible
-      videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID"; 
-      modal.style.display = "flex";
-    }
-  };
-
-  window.closeVideoModal = function() {
-    videoFrame.src = "";
-    modal.style.display = "none";
-  };
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      closeVideoModal();
-    }
-  };
-});
-
-  </script>
 
 
 
@@ -608,7 +409,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="profile-section">
   <img src="/assets/images/Ahmed-Profile.png" alt="Dr. Ahmed Sbeata" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
   <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Dr. Ahmed Sbeata</h4>
-  <p data-aos="fade-down" data-aos-duration="1000" data-aos-offset="10">Child's Behavior Expert & Parents <br> Coach</p>
+  <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Child's Behavior Expert & Parents <br> Coach</p>
 </div>
 
 <!-- Benefits Section Wrapper -->
@@ -651,37 +452,37 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="container-fluid p-100">
     <div class="events-header mb-2">
       <div class="prev-events-arrow">
-        <img src="/assets/images/chervonleft-black.png" alt="Previous"data-aos="fade-left" data-aos-duration="1000" data-aos-offset="10">
+        <img src="/assets/images/chervonleft-black.png" alt="Previous">
       </div>
       <div class="header-content-events mt-3">
         <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Customer Love</h2>
       </div>
       <div class="next-events-arrow">
-        <img src="/assets/images/chervon-right-black.png" alt="Next"data-aos="fade-right" data-aos-duration="1000" data-aos-offset="10">
+        <img src="/assets/images/chervon-right-black.png" alt="Next">
       </div>
     </div>
 
     <div class="CustomerLove-slider">
       <!-- First Card -->
-      <div class="CustomerLove-card"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">
+      <div class="CustomerLove-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/customer1.jfif" alt="Customer 1">
         <h5>Omar D.</h5>
         <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi dui purus amet lobortis eget. Urna in mollis eget nec eget elit a. Accumsan diam ac consequat non facilisi a. Sagittis venenatis magna lacinia a.</p>
       </div>
       <!-- Second Card -->
-      <div class="CustomerLove-card"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">
+      <div class="CustomerLove-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/customer2.jfif" alt="Customer 2">
         <h5>John F.</h5>
         <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi dui purus amet lobortis eget. Urna in mollis eget nec eget elit a. Accumsan diam ac consequat non facilisi a. Sagittis venenatis magna lacinia a.</p>
       </div>
       <!-- Third Card -->
-      <div class="CustomerLove-card"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">
+      <div class="CustomerLove-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/customer3.jfif" alt="Customer 3">
         <h5>Mandy A.</h5>
         <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi dui purus amet lobortis eget. Urna in mollis eget nec eget elit a. Accumsan diam ac consequat non facilisi a. Sagittis venenatis magna lacinia a..</p>
       </div>
       <!-- Add more cards as needed -->
-      <div class="CustomerLove-card"data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="10">
+      <div class="CustomerLove-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/customer2.jfif" alt="Customer 3">
         <h5>Mandy A.</h5>
         <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi dui purus amet lobortis eget. Urna in mollis eget nec eget elit a. Accumsan diam ac consequat non facilisi a. Sagittis venenatis magna lacinia a.</p>
