@@ -3591,6 +3591,11 @@ iframe {
   height: 50px;
   width: 100%;
   margin-right: 10px;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 .display-text-form {
   color: #807e7e;
@@ -3600,6 +3605,11 @@ iframe {
 .submit-btn-Adetails:hover {
   background-color: #b74f80;
   color: #810f40;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .change-password-btn-Adetails {
@@ -3610,12 +3620,22 @@ iframe {
   width: 100%;
   height: 50px;
   margin-left: 10px;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .change-password-btn-Adetails:hover {
-  background-color: #f8f9fa;
-  color: #7b1f36;
+  background-color: #b74f80;
+  color: #ffffff;
   border-color: #7b1f36;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .submit-btn-Adetails:focus,
