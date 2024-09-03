@@ -230,12 +230,10 @@ $(document).ready(function () {
   updateSliderSettings();
 });
 
-
-
 //event slider
-$(document).ready(function(){
+$(document).ready(function () {
   // Initialize Slick Slider
-  $('.events-slider').slick({
+  $(".events-slider").slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
@@ -247,46 +245,112 @@ $(document).ready(function(){
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-        }
-      }
-    ]
+          autoplay: true,
+          autoplaySpeed: 5000,
+        },
+      },
+    ],
   });
 
   // Custom navigation
-  $('.prev-events-arrow').click(function() {
-    $('.events-slider').slick('slickPrev');
+  $(".prev-events-arrow").click(function () {
+    $(".events-slider").slick("slickPrev");
   });
 
-  $('.next-events-arrow').click(function() {
-    $('.events-slider').slick('slickNext');
+  $(".next-events-arrow").click(function () {
+    $(".events-slider").slick("slickNext");
   });
 });
 
-// Vedio Modal Home 
-document.addEventListener("DOMContentLoaded", function() {
+// Vedio Modal Home
+document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("videoModal");
   var videoFrame = document.getElementById("videoFrame");
 
   // Ensure the modal is hidden initially
   modal.style.display = "none";
 
-  window.openVideoModal = function() {
-    if (modal.style.display === "none") { // Only open if not already visible
-      videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID"; 
+  window.openVideoModal = function () {
+    if (modal.style.display === "none") {
+      // Only open if not already visible
+      videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID";
       modal.style.display = "flex";
     }
   };
 
-  window.closeVideoModal = function() {
+  window.closeVideoModal = function () {
     videoFrame.src = "";
     modal.style.display = "none";
   };
 
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target == modal) {
       closeVideoModal();
     }
   };
 });
+
+/* Password */
+function togglePassword(fieldId) {
+  const field = document.getElementById(fieldId);
+  const icon = field.parentElement.querySelector(".password-toggle");
+
+  if (field.type === "password") {
+    field.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    field.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+}
+// Pagination
+document.addEventListener("DOMContentLoaded", function () {
+  const pageLinks = document.querySelectorAll(".page-number");
+
+  pageLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      pageLinks.forEach((link) => link.classList.remove("active"));
+
+      this.classList.add("active");
+    });
+  });
+});
+
+// Reset Password Popup
+// Function to show the popup
+function showPopup(event) {
+  event.preventDefault(); // Prevent form submission
+  const popup = document.getElementById("popup");
+  popup.classList.remove("d-none");
+  setTimeout(() => popup.classList.add("show"), 10); // Delay for transition effect
+}
+
+// Function to hide the popup
+function hidePopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
+  setTimeout(() => popup.classList.add("d-none"), 300); // Delay to match the transition duration
+}
+
+// Popup Buy Now
+// Function to show the popup
+function showPopup(event) {
+  event.preventDefault(); // Prevent default action
+  const popup = document.getElementById("popup");
+  popup.classList.remove("d-none");
+  setTimeout(() => popup.classList.add("show"), 10); // Delay for transition effect
+}
+
+// Function to hide the popup
+function hidePopup() {
+  const popup = document.getElementById("popup");
+  popup.classList.remove("show");
+  setTimeout(() => popup.classList.add("d-none"), 300); // Delay to match the transition duration
+}
+
+// Add event listener to the button
+document.getElementById("buy-now-btn").addEventListener("click", showPopup);

@@ -123,12 +123,28 @@
           <h5 class="bookinner-price"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10"><span>$</span>49.99</h5>
           <p class="bookinner-description"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Anxiety has many faces, and in this online course parents, caregivers, and professionals will learn about the psychological and physiological roots 
             of anxiety, why it is on the rise in our children, and what to do to help children better manage it.</p>
-          <a href="" class=" buy-now-innerbtn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+          <a href="#" id="buy-now-btn" class=" buy-now-innerbtn" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Buy Now</a>
+
         </div>
       </div>
     </div>
   </section>
-  
+  <!-- Popup HTML -->
+<div id="popup" class="popup-container d-none">
+  <div class="popup-content">
+      <div class="popup-left">
+          <img src="/assets/images/truepopup.svg" alt="Icon" class="popup-icon">  
+          <div class="popup-text-buy">
+            <h3>Login / Signup First</h3>
+            <p>You Must login/signup first to proceed purchasing.</p> 
+          </div>
+      </div>
+      <div class="buttons-login-popup ">
+      <button class="login-signup-button-popup" onclick="hidePopup()">Login / Signup</button>
+      <button class="close-buybutton-popup" onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+</div>
 
 
 
