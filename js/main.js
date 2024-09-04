@@ -262,6 +262,41 @@ $(document).ready(function () {
   });
 });
 
+// Customer-Love Slider
+$(document).ready(function () {
+  // Initialize Slick Slider
+  $(".CustomerLove-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false, // Disable default arrows
+    dots: true,
+    dotsClass: "custom-dots-customers", // Use custom dots class
+    customPaging: function (slider, i) {
+      return '<div class="dot-customers"></div>'; // Custom dot
+    },
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+        },
+      },
+    ],
+  });
+
+  // Custom navigation
+  $(".prev-events-arrow").click(function () {
+    $(".CustomerLove-slider").slick("slickPrev");
+  });
+
+  $(".next-events-arrow").click(function () {
+    $(".CustomerLove-slider").slick("slickNext");
+  });
+});
 // Vedio Modal Home
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("videoModal");

@@ -89,7 +89,7 @@
   
 <!--Hero Section-->
   <section class="hero-section">
-    <div class="container-fluid ">
+    <div class="container-fluid p-80">
         <div class="content-wrapper">
             <p class="word-experts"data-aos="fade-up" data-aos-duration="800" data-aos-offset="10">Word Experts</p>
             <h1 class="hero-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Courses & Resources For Parents & Professionals</h1>
@@ -289,16 +289,17 @@
       <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/events1.png" alt="Event 1">
         <div class="content-event-slider">
-          <h3>Event</h3>
-          <h3>Name</h3>
+           <!-- Overlay on text content -->
+        <div class="overlay-event-slider"></div>
+          <h3>Event Name</h3>
           <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
         </div>
       </div>
       <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
         <img src="/assets/images/events2.png" alt="Event 2">
         <div class="content-event-slider">
-          <h3>Event</h3>
-          <h3>Name</h3>
+          <div class="overlay-event-slider"></div>
+          <h3>Event Name</h3>
           <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
         </div>
       </div>
@@ -306,40 +307,40 @@
     <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events3.png" alt="Event 2">
       <div class="content-event-slider">
-        <h3>Event</h3>
-        <h3>Name</h3>
+        <div class="overlay-event-slider"></div>
+        <h3>Event Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
     <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events5.png" alt="Event 3">
       <div class="content-event-slider">
-        <h3>Event</h3>
-        <h3>Name</h3>
+        <div class="overlay-event-slider"></div>
+        <h3>Event Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
     <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events6.png" alt="Event 4">
       <div class="content-event-slider">
-        <h3>Event</h3>
-        <h3>Name</h3>
+        <div class="overlay-event-slider"></div>
+        <h3>Event Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
     <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events3.png" alt="Event 5">
       <div class="content-event-slider">
-        <h3>Event</h3>
-        <h3>Name</h3>
+        <div class="overlay-event-slider"></div>
+        <h3>Event Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
     <div class="event-card"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
       <img src="/assets/images/events3.png" alt="Event 5">
       <div class="content-event-slider">
-        <h3>Event</h3>
-        <h3>Name</h3>
+        <div class="overlay-event-slider"></div>
+        <h3>Event Name</h3>
         <p>Lorem ipsum dolor sit amet consectetur. Fusce tristique.</p>
       </div>
     </div>
@@ -492,42 +493,7 @@
 </div>
 
 
-<script>
-  $(document).ready(function () {
-    // Initialize Slick Slider
-    $('.CustomerLove-slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false, // Disable default arrows
-      dots: true,
-      dotsClass: 'custom-dots-customers', // Use custom dots class
-      customPaging: function (slider, i) {
-        return '<div class="dot-customers"></div>'; // Custom dot
-      },
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-          }
-        }
-      ]
-    });
 
-    // Custom navigation
-    $('.prev-events-arrow').click(function(){
-    $('.CustomerLove-slider').slick('slickPrev') ;
-    });
-
-    $('.next-events-arrow').click(function () {
-      $('.CustomerLove-slider').slick('slickNext');
-    });
-  });
-</script>
 
 
 

@@ -112,7 +112,7 @@ input::-webkit-inner-spin-button {
   padding-right: 120px !important;
 }
 .p-130 {
-  padding-left: 130px !important;
+  padding-left: 150px !important;
   padding-right: 130px !important;
 }
 .p-165 {
@@ -129,6 +129,10 @@ input::-webkit-inner-spin-button {
 }
 .pl-100 {
   padding-left: 100px;
+}
+.p-80 {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
 }
 @media (max-width: 768px) {
   .p-165 {
@@ -161,6 +165,10 @@ input::-webkit-inner-spin-button {
   .p-140 {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+  .p-80 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }
 
@@ -319,6 +327,7 @@ input::-webkit-inner-spin-button {
 
 /* Hero */
 
+/* Hero */
 .hero-section {
   background-image: url("/assets/images/heroBg.jpeg");
   background-size: cover;
@@ -326,17 +335,20 @@ input::-webkit-inner-spin-button {
   height: 650px;
   display: flex;
   align-items: center;
-  justify-content: center;
   color: white;
+  position: relative; /* Ensure absolute positioning works inside this element */
 }
 
 .content-wrapper {
-  position: absolute;
-  left: 9%;
-  transform: translateY(-50%);
-  top: 50%;
+  position: relative; /* Changed from absolute to relative */
+  left: 0;
+  padding-left: 5%;
   max-width: 500px;
   text-align: left;
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: center;
+  height: 100%; /* Take full height to center the content vertically */
 }
 
 .word-experts {
@@ -386,6 +398,7 @@ input::-webkit-inner-spin-button {
 .explore-courses {
   background-color: #810f40;
 }
+
 .become-member {
   background-color: #55674f;
 }
@@ -406,52 +419,44 @@ input::-webkit-inner-spin-button {
 }
 
 /* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 0 2%;
+    justify-content: flex-start;
+  }
+
+  .content-wrapper {
+    position: relative;
+    left: 0;
+    transform: none;
+    top: auto;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 5%;
+  }
+
   .hero-title {
     font-size: 28px;
+    width: auto;
+    line-height: 1.5;
   }
 
   .word-experts {
     font-size: 15px;
   }
-  .hero-section {
-    background-image: url("/assets/images/heroBg.jpeg");
-    background-size: cover;
-    background-position: center;
-    height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  }
 
-  .content-wrapper {
-    position: absolute;
-    left: 5%;
-    transform: translateY(-50%);
-    top: 45%;
-    max-width: 500px;
-    text-align: left;
-  }
-  .become-member,
-  .explore-courses {
-    padding: 15px 25px;
-  }
   .button-heros {
-    display: flex;
     flex-direction: column;
-  }
-  .hero-title {
-    font-size: 27px;
-    font-weight: 600;
-    color: #1b2617;
-    width: auto;
-    line-height: 2;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
   }
 
   .become-member,
   .explore-courses {
-    width: 60%;
+    width: 70%;
+    padding: 15px;
   }
 }
 
@@ -950,8 +955,25 @@ input::-webkit-inner-spin-button {
   font-size: 14px;
   margin: 0;
 }
+.content-event-slider {
+  position: relative;
+  padding: 15px;
+  z-index: 2;
+  color: #ffffff;
+  overflow: hidden;
+}
+.overlay-event-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 8px;
+}
 .content-event-slider h3 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 400;
   color: #ffffff;
   display: -webkit-box;
@@ -959,6 +981,8 @@ input::-webkit-inner-spin-button {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 2;
+  position: relative;
 }
 .content-event-slider p {
   font-size: 14px;
@@ -969,6 +993,8 @@ input::-webkit-inner-spin-button {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 2;
+  position: relative;
 }
 /* View All Button */
 .view-all-btn {
