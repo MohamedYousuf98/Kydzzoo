@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // brands
 $(document).ready(function () {
   $(".brands").slick({
-    slidesToShow: 5,
+    centermode:true,
+    slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,
     autoplay: false,
@@ -83,45 +84,6 @@ $(document).ready(function () {
     ],
   });
 
-  $(".prev-brands-arrow").click(function () {
-    $(".brands").slick("slickPrev");
-  });
-
-  $(".next-brands-arrow").click(function () {
-    $(".brands").slick("slickNext");
-  });
-});
-
-//
-$(document).ready(function () {
-  $(".brands").slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    infinite: true,
-    autoplay: false,
-    dots: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 3000,
-        },
-      },
-    ],
-  });
-
-  // Custom navigation
   $(".prev-brands-arrow").click(function () {
     $(".brands").slick("slickPrev");
   });
