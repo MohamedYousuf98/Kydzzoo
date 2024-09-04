@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // brands
 $(document).ready(function () {
   $(".brands").slick({
-    centermode:true,
+    centermode: true,
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     dots: false,
     arrows: false,
     autoplaySpeed: 5000,
