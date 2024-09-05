@@ -4073,6 +4073,9 @@ input[type="password"]::-webkit-textfield-decoration-container {
   .error-message-title {
     font-size: 30px !important;
   }
+  .custom-input-signup i {
+    font-size: 15px;
+  }
 }
 /*--------------------------------------Reset Password Popup---------------------------------------*/
 /* Popup styles */
