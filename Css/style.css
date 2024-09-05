@@ -393,6 +393,11 @@ input::-webkit-inner-spin-button {
   transition: background-color 0.3s ease, color 0.3s ease;
   text-align: center;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 
 .explore-courses {
@@ -406,11 +411,11 @@ input::-webkit-inner-spin-button {
 .become-member:hover,
 .explore-courses:hover {
   color: #1b2617;
-  transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -ms-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
 
 .become-member:focus,
@@ -522,6 +527,22 @@ input::-webkit-inner-spin-button {
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
+}
+.btn-custom-primary:hover,
+.btn-custom-primary:focus {
+  background-color: #810f40;
+  color: #191919;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.btn-custom-primary:focus,
+.btn-custom-primary:active {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Responsive Design */
@@ -1684,15 +1705,32 @@ input::-webkit-inner-spin-button {
 .blog-read-more:hover {
   color: #1b2617;
 }
-.btn-custom {
+.btn-seemore {
   background-color: #810f40;
   color: #ffffff;
   border-radius: 50px;
   border: none;
   padding: 13px 30px;
   margin-top: 20px;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
 }
-
+.btn-seemore:focus .btn-seemore:active,
+.btn-seemore:hover {
+  background-color: #810f40;
+  color: #1b2617;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
 .blog-image {
   height: 404px;
   width: 407px;
@@ -4265,4 +4303,59 @@ input[type="password"]::-webkit-textfield-decoration-container {
   -moz-transition: 0.5s ease-in-out;
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
+}
+/*------------------------------------User Icon------------------------------------------*/
+.user-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon-img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.user-icon:hover .user-icon-img {
+  transform: scale(1.1);
+}
+
+.custom-dropdown {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  padding: 0;
+  color: #3e3e59;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  border-bottom: 0.7px solid #b74f80 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.custom-dropdown .dropdown-item i {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #b74f80;
+  transition: color 0.3s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f7f7f7;
+  color: black;
 }
