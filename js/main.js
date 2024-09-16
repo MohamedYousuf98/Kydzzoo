@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // brands
 $(document).ready(function () {
+  const isRTL = $("html").attr("dir") === "rtl";
   $(".brands").slick({
     centermode: true,
     slidesToShow: 6,
@@ -63,6 +64,7 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     autoplaySpeed: 5000,
+    rtl: isRTL,
 
     responsive: [
       {
@@ -85,22 +87,32 @@ $(document).ready(function () {
   });
 
   $(".prev-brands-arrow").click(function () {
-    $(".brands").slick("slickPrev");
+    if (isRTL) {
+      $(".brands").slick("slickNext");
+    } else {
+      $(".brands").slick("slickPrev");
+    }
   });
 
   $(".next-brands-arrow").click(function () {
-    $(".brands").slick("slickNext");
+    if (isRTL) {
+      $(".brands").slick("slickPrev");
+    } else {
+      $(".brands").slick("slickNext");
+    }
   });
 });
 
-//Curses Slider
+//Courses Slider
 $(document).ready(function () {
+  const isRTL = $("html").attr("dir") === "rtl";
   $(".courses-slider").slick({
     slidesToShow: 3, // Default number of slides to show
     slidesToScroll: 1,
     infinite: true,
     dots: true,
     autoplaySpeed: 5000,
+    rtl: isRTL,
     responsive: [
       {
         breakpoint: 1024, // For tablets and smaller desktops
@@ -123,20 +135,22 @@ $(document).ready(function () {
 
   // Custom navigation
   $(".prev-events-arrow").click(function () {
-    $(".courses-slider").slick("slickPrev");
+    $(".courses-slider").slick(isRTL ? "slickNext" : "slickPrev");
   });
 
   $(".next-events-arrow").click(function () {
-    $(".courses-slider").slick("slickNext");
+    $(".courses-slider").slick(isRTL ? "slickPrev" : "slickNext");
   });
 });
 
 // Our Books Slider
 $(document).ready(function () {
+  const isRTL = $("html").attr("dir") === "rtl";
   // Initialize the slider with default settings
   function initializeSlider() {
     $(".OurBooks-slider").slick({
       dots: true,
+      rtl: isRTL,
       infinite: true,
       slidesToShow: 3, // Default: Show 3 slides at a time
       slidesToScroll: 1,
@@ -194,10 +208,12 @@ $(document).ready(function () {
 
 //event slider
 $(document).ready(function () {
+  const isRTL = $("html").attr("dir") === "rtl";
   // Initialize Slick Slider
   $(".events-slider").slick({
     slidesToShow: 5,
     slidesToScroll: 1,
+    rtl: isRTL,
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false, // Disable default arrows
@@ -226,10 +242,12 @@ $(document).ready(function () {
 
 // Customer-Love Slider
 $(document).ready(function () {
+  const isRTL = $("html").attr("dir") === "rtl";
   // Initialize Slick Slider
   $(".CustomerLove-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
+    rtl: isRTL,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false, // Disable default arrows
@@ -294,12 +312,12 @@ function togglePassword(fieldId) {
 
   if (field.type === "password") {
     field.type = "text";
-    icon.classList.remove("fa-eye");
-    icon.classList.add("fa-eye-slash");
-  } else {
-    field.type = "password";
     icon.classList.remove("fa-eye-slash");
     icon.classList.add("fa-eye");
+  } else {
+    field.type = "password";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
   }
 }
 // Pagination
