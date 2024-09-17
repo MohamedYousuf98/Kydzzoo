@@ -61,7 +61,7 @@ input::-webkit-inner-spin-button {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-/* Back to top button */
+/* Back to top button 
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -99,6 +99,7 @@ input::-webkit-inner-spin-button {
     display: none !important;
   }
 }
+*/
 .p-100 {
   padding-left: 100px !important;
   padding-right: 100px !important;
@@ -179,7 +180,7 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #b74f80;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4442,5 +4443,88 @@ input[type="password"]::-webkit-textfield-decoration-container {
     font-weight: 500;
     font-size: 14px;
     color: #1b2617cc;
+  }
+}
+/* ----------------------------- Bio Section -------------------------------------------------*/
+.quote-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.quote-icon {
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.quote-icon.left {
+  top: 20px;
+  left: -20px;
+}
+
+.quote-icon.right {
+  bottom: 20px;
+  right: -20px;
+}
+
+.quote-content {
+  text-align: center;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.quote-text {
+  font-size: 22px;
+  color: #2f2f2f;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: #6c7170;
+}
+/*-------------------------------WhattsUp Icon -----------------------------------------------*/
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #b74f80;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon svg {
+  width: 30px;
+  height: 30px;
+  color:#ffffff;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .whatsapp-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-icon svg {
+    width: 27px;
+    height: 27px;
   }
 }

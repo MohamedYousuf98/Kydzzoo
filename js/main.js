@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   document.querySelector(".content").style.display = "block";
 });
 
-// Back to Top
+/*
 let backtotop = document.querySelector(".back-to-top");
 if (backtotop) {
   const toggleBacktotop = () => {
@@ -29,7 +29,7 @@ if (backtotop) {
     });
   });
 }
-
+*/
 function toggleMenu() {
   const mobileMenu = document.querySelector(".mobile-menu");
   mobileMenu.classList.toggle("show");
@@ -50,6 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("active");
     }
   });
+});
+
+//WhattsApp Icon
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("whatsappIcon")
+    .addEventListener("click", function () {
+      window.open("https://wa.me/1234567890", "_blank");
+    });
 });
 
 // brands
