@@ -2330,6 +2330,7 @@ input::-webkit-inner-spin-button {
 }
 
 .buy-now-btn,
+.buy-now-form,
 .buynow-see-details {
   margin-top: auto;
 }
@@ -2362,7 +2363,27 @@ input::-webkit-inner-spin-button {
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
 }
-.buy-now-btn:hover {
+
+.buy-now-form {
+  display: inline-block;
+  padding: 0px 10px;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  background-color: #810f40;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  margin-top: 7px;
+}
+.buy-now-btn:hover,
+.buy-now-form:hover  {
   color: #000000;
   text-decoration: none;
   transition: 0.3s ease-in-out;
