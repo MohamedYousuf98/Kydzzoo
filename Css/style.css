@@ -180,7 +180,7 @@ input::-webkit-inner-spin-button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2383,7 +2383,7 @@ input::-webkit-inner-spin-button {
   margin-top: 7px;
 }
 .buy-now-btn:hover,
-.buy-now-form:hover  {
+.buy-now-form:hover {
   color: #000000;
   text-decoration: none;
   transition: 0.3s ease-in-out;
@@ -4518,7 +4518,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   right: 20px;
   width: 55px;
   height: 55px;
-  background-color: #b74f80;
+  background-color: #28d045;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -4531,7 +4531,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
 .whatsapp-icon svg {
   width: 30px;
   height: 30px;
-  color:#ffffff;
+  color: #ffffff !important;
 }
 
 .whatsapp-icon:hover {
@@ -4547,5 +4547,17 @@ input[type="password"]::-webkit-textfield-decoration-container {
   .whatsapp-icon svg {
     width: 27px;
     height: 27px;
+  }
+  .quote-icon img {
+    font-size: 10px;
+  }
+  .quote-icon.left {
+    top: 20px;
+    left: -10px;
+  }
+
+  .quote-icon.right {
+    bottom: 20px;
+    right: -10px;
   }
 }
