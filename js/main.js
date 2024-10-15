@@ -286,6 +286,8 @@ $(document).ready(function () {
     $(".CustomerLove-slider").slick("slickNext");
   });
 });
+
+
 // Vedio Modal Home
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("videoModal");
@@ -294,16 +296,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ensure the modal is hidden initially
   modal.style.display = "none";
 
-  window.openVideoModal = function () {
+  window.openVideoModal = function (videoUrl) {
     if (modal.style.display === "none") {
-      // Only open if not already visible
-      videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID";
+      // Use the passed video URL dynamically
+      videoFrame.src = videoUrl; // Pass the video URL to the iframe
       modal.style.display = "flex";
     }
   };
 
   window.closeVideoModal = function () {
-    videoFrame.src = "";
+    videoFrame.src = ""; // Clear the src when closing the modal
     modal.style.display = "none";
   };
 
@@ -313,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
 
 /* Password */
 function togglePassword(fieldId) {

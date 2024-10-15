@@ -1157,7 +1157,6 @@ input::-webkit-inner-spin-button {
 .video-section {
   position: relative;
   text-align: center;
-  background-image: url("/assets/images/OurBooksBg.webp");
   background-size: cover;
   background-position: center;
   border-radius: 0 0 60px 60px;
@@ -1190,7 +1189,6 @@ input::-webkit-inner-spin-button {
 }
 
 .video-overlay {
-  background: url("/assets/images/vedioBg.webp");
   background-size: cover;
   background-position: center;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -1198,7 +1196,6 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 .video-overlay-about {
-  background: url("/assets/images/vedioimg-about.webp");
   background-size: cover;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   border-radius: 15px;
@@ -1416,6 +1413,7 @@ input::-webkit-inner-spin-button {
     height: 250px;
   }
 }
+
 /* CustomerLove Section */
 .customer-love {
   padding: 40px 0;
@@ -1435,21 +1433,20 @@ input::-webkit-inner-spin-button {
 
 .CustomerLove-card {
   border: none;
-  padding: 40px;
+  padding: 12px;
   box-shadow: 0px 6px 12px 0px #00000009;
-
   border-radius: 10px;
   background-color: white;
   margin: 10px;
   text-align: center;
-  height: 290px !important;
+  height: 500px !important;
   justify-content: center;
 }
 
 .CustomerLove-card img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
   margin: 0 auto 15px auto;
   display: block;
 }
@@ -1786,7 +1783,6 @@ input::-webkit-inner-spin-button {
 
 /* Footer Section */
 .footer-section {
-  background-image: url("/assets/images/FooterBg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2190,7 +2186,7 @@ input::-webkit-inner-spin-button {
 .buy-img-card {
   height: 200px;
   border-radius: 12px 12px 0 0;
-  object-fit: cover;
+  width: 100%;
 }
 .buy-now-section {
   padding-top: 6%;
@@ -4467,6 +4463,102 @@ input[type="password"]::-webkit-textfield-decoration-container {
   }
 }
 /* ----------------------------- Bio Section -------------------------------------------------*/
+.quote-container-slogan {
+  position: relative;
+  max-width: 1000px;
+  margin: 45px auto;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #f8f9fa, #e8b6c8);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.new-line {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.quote-container-slogan:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.quote-content-slogan {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+.quote-icon-slogan {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+}
+.quote-icon svg {
+  fill: #e3a6bb;
+  opacity: 0.5;
+}
+
+.quote-icon-slogan.left {
+  top: 10px;
+  left: 10px;
+}
+
+.quote-icon-slogan.right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.quote-icon.left {
+  left: 10px;
+}
+
+.quote-icon.right {
+  right: 10px;
+}
+.quote-content {
+  text-align: center;
+  z-index: 1;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.quote-text {
+  font-size: 22px;
+  color: #2f2f2f;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: #6c7170;
+}
+@media (max-width: 768px) {
+  .quote-container-slogan {
+    padding: 20px;
+  }
+  .quote-content-slogan {
+    font-size: 18px;
+    font-weight: 550;
+  }
+  .quote-icon-slogan {
+    display: none;
+  }
+}
 .quote-container {
   position: relative;
   max-width: 1000px;
@@ -4560,4 +4652,105 @@ input[type="password"]::-webkit-textfield-decoration-container {
     bottom: 20px;
     right: -10px;
   }
+}
+
+/*------------------------------- Courses Vedios -----------------------------------------------*/
+
+.course-curriculum {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0px 7px 30px 0px #00000012;
+  margin-bottom: 20px;
+}
+
+.course-curriculum h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1b2617;
+  margin-bottom: 20px;
+}
+
+.curriculum-section {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-header {
+  background-color: #b74f80;
+  padding: 12px 20px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.chevron-Curriculum {
+  color: #ffffff;
+}
+
+.info-icon-Curriculum,
+.lock-icon-Curriculum,
+.play-icon-Curriculum {
+  color: #000;
+}
+
+.chevron-Curriculum {
+  font-size: 18px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.collapse.show .chevron-Curriculum {
+  transform: rotate(180deg);
+}
+
+.info-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.curriculum-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.video-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.video-item-Curriculum:last-child {
+  border-bottom: none;
+}
+
+.lock-icon {
+  font-size: 16px;
+}
+
+.time {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.day-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.play-icon-Curriculum {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.play-icon-Curriculum:hover {
+  color: #b74f80;
 }
