@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
- 
-    <title>KydZoo </title>
+<head>
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Swiper Slider CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,7 +20,7 @@
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
         <!-- Custom Script -->
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaawogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -30,73 +28,231 @@
 <body>
 
   <div id="loader" class="loader"></div>
-    
-  
 
 
-  
+
+
+
    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid p-100">
-    <a class="navbar-brand" href="#">
-      <img src="/assets/images/kydzoologo.webp"  class="logo-img">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto ">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Books</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-      </ul>
-
-      <div class="d-flex align-items-center">
-          <!-- User Icon with Dropdown -->
-          <div class="dropdown ">
-            <a href="#" class="user-icon" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/images/user-icon.svg"  class="user-icon-img">
-            </a>
-
-            <!-- Dropdown Menu -->
-            <ul class="dropdown-menu dropdown-menu-end custom-dropdown mt-5" aria-labelledby="userDropdown">
-              <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> My Profile</a></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-            </ul>
+   <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid p-100">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/kydzoologo.webp"  class="logo-img">
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+  
+        <div class="d-flex align-items-center">
+            <!-- User Icon with Dropdown -->
+            <div class="dropdown ">
+              <a href="#" class="user-icon" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/user-icon.svg"  class="user-icon-img">
+              </a>
+  
+              <!-- Dropdown Menu -->
+              <ul class="dropdown-menu dropdown-menu-end custom-dropdown mt-5" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+              </ul>
+            </div>
+  
+          <!-- Language Selector -->
+          <div class="language-selector">
+            <select>
+              <option value="EN">EN</option>
+              <option value="AR">AR</option>
+            </select>
           </div>
-
-        <!-- Language Selector -->
-        <div class="language-selector">
-          <select>
-            <option value="EN">EN</option>
-            <option value="AR">AR</option>
-          </select>
         </div>
       </div>
     </div>
+  </nav>
+  
+  
+    
+
+
+
+
+
+<!-- Header Section -->
+<section class="header-bg">
+<div class="container-fluid p-100">
+<div class="header-section">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <p class="small-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+        Home 
+        <img src="/assets/images/smallchervon left.svg" alt="Arrow" class="breadcrumb-arrow"> 
+        About us
+      </p>
+      <h1 class="header-title"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">About Us</h1>
+      <p class="header-subtitle"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Learn about our motivation behind making a positive difference for children</p>
+    </div>
+    </div>
+    </div>
+  </section>
+  
+
+  <section class="container-fluid p-100">
+    <div class="quote-container">
+     
+      <div class="quote-icon left">
+        <img src="/assets/images/quote left.png" alt="Opening Quote Icon">
+      </div>
+      <div class="quote-content">
+          <p class="quote-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, consectetur ducimus laudantium vel, magni quibusdam incidunt tenetur aliquam explicabo, et delectus? Tempore aspernatur est fuga animi similique labore quidem consequuntur.</p>
+          <p class="quote-author">Dr. Ahmed Sbeata - Child’s behavior Expert & Parents Coach</p>
+      </div>
+   
+      <div class="quote-icon right">
+        <img src="/assets/images/oui_quote.png" alt="Closing Quote Icon">
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+ <!-- Our Vission -->
+<section class="our-vission" >
+ <div class="container-fluid p-100">
+    <div class="row">
+        <div class="col-md-6  image-ourvision">
+            <img src="/assets/images/our-vision-img.webp" class="img-fluid vision-image" alt="Vision Image">
+        </div>
+       
+        <div class="col-md-6 content-ourvision">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Our <span class="highlight-about">Vision</span></h2>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Sodales est et nunc mi. Amet volutpat viverra posuere vitae a morbi a. Magna id purus praesent id bibendum orci ipsum. Suspendisse commodo nulla nec sit aliquam porttitor at. Tempor in sit est etiam. Egestas sapien lacus ac diam posuere. Pellentesque feugiat purus facilisis rhoncus.</p>
+            <a href="/contact.html" class="btn contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+ <!-- Our Mission -->
+ <section class="our-mission" >
+    <div class="container-fluid p-100">
+        <div class="row">
+           <div class="col-md-6 content-ourvision">
+               <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Our <span class="highlight-about">Mission</span></h2>
+               <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Sodales est et nunc mi. Amet volutpat viverra posuere vitae a morbi a. Magna id purus praesent id bibendum orci ipsum. Suspendisse commodo nulla nec sit aliquam porttitor at. Tempor in sit est etiam. Egestas sapien lacus ac diam posuere. Pellentesque feugiat purus facilisis rhoncus.</p>
+               <a href="/contact.html" class="btn contact-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Contact Us</a>
+           </div>
+           <div class="col-md-6  image-ourvision">
+               <img src="/assets/images/our-mission-img.webp" class="img-fluid vision-image" alt="Vision Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+           </div>
+       </div>
+   </section>
+
+ <!-- Our Message -->
+ <section class="our-values" >
+    <div class="container-fluid p-100">
+        <div class="row">
+           <div class="col-md-6  image-ourvision">
+               <img src="/assets/images/our-values-img.webp" class="img-fluid vision-image" alt="Vision Image"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+           </div>
+           <div class="col-md-6 content-ourvision">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Our <span class="highlight-about">Message</span></h2>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Sodales est et nunc mi. Amet volutpat viverra posuere vitae a morbi a. Magna id purus praesent id bibendum orci ipsum. Suspendisse commodo nulla nec sit aliquam porttitor at. Tempor in sit est etiam. Egestas sapien lacus ac diam posuere. Pellentesque feugiat purus facilisis rhoncus.</p>
+            <a href="/contact.html" class="btn contact-btn"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Contact Us</a>
+        </div>
+       </div>
+   </section>
+
+
+
+
+  <!-- Our History Section 
+  <section class="our-history">
+    <div class="container-fluid p-100">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="overlay"></div>
+    <div class="history-content text-center ">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Our <span class="highlight-history">History</span></h2>
+        <p class="text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">Lorem ipsum dolor sit amet consectetur. Urna dictumst facilisis at erat diam tempor. Enim risus at porta tellus. Vestibulum enim quis nibh nisl in quis sollicitudin faucibus. Eleifend faucibus a lorem sed nisi velit rhoncus sit semper. Tempor quis mattis nam blandit mi id. Sed lorem sit odio fermentum quam enim accumsan placerat id. 
+            Nisl viverra lobortis tristique purus sed praesent dis. Morbi sit suspendisse morbi sit tortor mauris nisl aliquet orci.</p>
+    </div>
+</section>
+-->
+
+
+
+<!--Vedio Section-->
+<section class="container-fluid p-100 ">
+  <div class="video-section ">
+    <div class="video-container">
+      <div class="video-overlay-about" 
+      style="background-image: url('/assets/images/vedioimg-about.webp'); " 
+      data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+        <div class="play-button" onclick="openVideoModal()">
+          <img src="/assets/images/vedio-icon.webp" alt="Play Button">
+        </div>
+      </div>
+    </div>
+    <div class="description-vedio">
+      <p>DISCOVER HOW OUR MISSIONS CAN MAKE A DIFFERENCE FOR YOU & A CHILD IN YOUR LIFE.</p>
+      <div class="d-flex justify-content-center mt-5">
+       
+        <a href="https://youtube.com" class="join-youtube-channel" target="_blank">Join Youtube Channel</a>
+      </div>
+    </div>
   </div>
-</nav>
+</section>
+
+  
+  
+  
+  
+  <!--Vedio Modal-->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeVideoModal()">&times;</span>
+      <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  
+  
+  <div class="whatsapp-icon" id="whatsappIcon">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+      <defs>
+      </defs>
+      <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+        <path d="M 0.576 44.596 C 0.573 52.456 2.626 60.129 6.53 66.892 L 0.201 90 l 23.65 -6.201 c 6.516 3.553 13.852 5.426 21.318 5.429 h 0.019 c 24.586 0 44.601 -20.009 44.612 -44.597 c 0.004 -11.917 -4.633 -23.122 -13.055 -31.552 C 68.321 4.65 57.121 0.005 45.188 0 C 20.597 0 0.585 20.005 0.575 44.595 M 14.658 65.727 l -0.883 -1.402 c -3.712 -5.902 -5.671 -12.723 -5.669 -19.726 C 8.115 24.161 24.748 7.532 45.201 7.532 c 9.905 0.004 19.213 3.865 26.215 10.871 c 7.001 7.006 10.854 16.32 10.851 26.224 c -0.009 20.439 -16.643 37.068 -37.08 37.068 h -0.015 c -6.655 -0.004 -13.181 -1.79 -18.872 -5.168 l -1.355 -0.803 l -14.035 3.68 L 14.658 65.727 z M 45.188 89.228 L 45.188 89.228 L 45.188 89.228 C 45.187 89.228 45.187 89.228 45.188 89.228" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+        <path d="M 34.038 25.95 c -0.835 -1.856 -1.714 -1.894 -2.508 -1.926 c -0.65 -0.028 -1.394 -0.026 -2.136 -0.026 c -0.744 0 -1.951 0.279 -2.972 1.394 c -1.022 1.116 -3.902 3.812 -3.902 9.296 c 0 5.485 3.995 10.784 4.551 11.529 c 0.558 0.743 7.712 12.357 19.041 16.825 c 9.416 3.713 11.333 2.975 13.376 2.789 c 2.044 -0.186 6.595 -2.696 7.524 -5.299 c 0.929 -2.603 0.929 -4.834 0.651 -5.299 c -0.279 -0.465 -1.022 -0.744 -2.137 -1.301 c -1.115 -0.558 -6.595 -3.254 -7.617 -3.626 c -1.022 -0.372 -1.765 -0.557 -2.509 0.559 c -0.743 1.115 -2.878 3.625 -3.528 4.368 c -0.65 0.745 -1.301 0.838 -2.415 0.28 c -1.115 -0.559 -4.705 -1.735 -8.964 -5.532 c -3.314 -2.955 -5.551 -6.603 -6.201 -7.719 c -0.65 -1.115 -0.069 -1.718 0.489 -2.274 c 0.501 -0.499 1.115 -1.301 1.673 -1.952 c 0.556 -0.651 0.742 -1.116 1.113 -1.859 c 0.372 -0.744 0.186 -1.395 -0.093 -1.953 C 37.195 33.666 35.029 28.154 34.038 25.95" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+      </g>
+      </svg>
+  </div>
 
 
   
@@ -401,37 +557,6 @@
 
 
 
-<!--Vedio div-->
-<div class="container-fluid p-100">
-  <div class="video-div" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
-    <div class="video-container">
-      <div class="video-overlay" 
-      style="background-image: url('/assets/images/vedioBg.webp'); " 
-      data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
-        <div class="play-button" onclick="openVideoModal('https://www.youtube.com/embed/YOUR_VIDEO_ID')">
-          <img src="/assets/images/vedio-icon.webp" >
-        </div>
-      </div>
-    </div>
-    <div class="description-vedio">
-      <p>Lorem ipsum dolor sit amet consectetur. Mattis justo bibendum nascetur habitasse vitae suspendisse.</p>
-      <div class="d-flex justify-content-center mt-5">
-        <a href="" class="join-youtube-channel">Join Youtube Channel</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Video Modal -->
-<div id="videoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeVideoModal()">&times;</span>
-    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
 
 
 
@@ -586,7 +711,6 @@
     </svg>
   </a>
 </div>
-
 
 
 
