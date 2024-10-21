@@ -381,3 +381,38 @@ function hidePopup() {
 
 // Add event listener to the button
 document.getElementById("buy-now-btn").addEventListener("click", showPopup);
+
+// Function to show the new modal
+function showNewVideoModal(videoUrl) {
+  const modal = document.getElementById("newVideoModal");
+  const videoFrame = document.getElementById("newVideoFrame");
+
+  // Set the video URL
+  videoFrame.src = videoUrl;
+
+  modal.classList.remove("d-none");
+  setTimeout(() => modal.classList.add("show"), 10); // Delay for transition effect
+}
+
+// Function to hide the new modal
+function hideNewVideoModal() {
+  const modal = document.getElementById("newVideoModal");
+  const videoFrame = document.getElementById("newVideoFrame");
+
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modal.classList.add("d-none"); // Hide the modal after closing
+    videoFrame.src = ""; // Clear the video source
+  }, 300); // Delay to match the transition duration
+}
+
+// Close the modal when clicking outside of it
+window.onclick = function (event) {
+  const modal = document.getElementById("newVideoModal");
+  if (event.target === modal) {
+    hideNewVideoModal();
+  }
+};
+
+
+

@@ -4686,6 +4686,9 @@ input[type="password"]::-webkit-textfield-decoration-container {
 .play-icon-Curriculum {
   color: #000;
 }
+.lock-icon-Curriculum{
+  font-size: 10px;
+}
 
 .chevron-Curriculum {
   font-size: 18px;
@@ -4704,11 +4707,11 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 .curriculum-title {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: #ffffff;
 }
 
-.video-item {
+.new-video-item {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   padding-left: 10px;
@@ -4731,8 +4734,11 @@ input[type="password"]::-webkit-textfield-decoration-container {
   font-size: 15px;
   font-weight: 600;
   color: #333;
+ 
 }
-
+.lock-icon-Curriculum {
+  font-size: 16px;
+}
 .play-icon-Curriculum {
   font-size: 20px;
   color: #000;
@@ -4774,4 +4780,34 @@ input[type="password"]::-webkit-textfield-decoration-container {
 }
 .calender-section {
   padding-top: 10%;
+}
+/*----------------------------------new vedio modal------------------------*/
+.new-video-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content-new {
+  background-color: white;
+  padding: 33px;
+  border-radius: 5px;
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+}
+
+.close-new {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 35px;
 }

@@ -256,82 +256,139 @@
                   <hr class="custom-desc-hr" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
               </div>
               <div class="course-curriculum mt-3">
-                  <h2>Course Curriculum</h2>
-                  <div class="curriculum-section">
-                      <div class="curriculum-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#videoList" aria-expanded="false" aria-controls="videoList">
-                          <div class="d-flex align-items-center">
-                              <i class="bi bi-chevron-down chevron-Curriculum"></i>
-                              <span class="curriculum-title">days summer challenge – all messages 30</span>
-                          </div>
-                      </div>
-                      <div id="videoList" class="collapse">
-                          <div class="row video-item">
-                              <div class="col-1">
-                                  <i class="bi bi-lock-fill lock-icon-Curriculum"></i>
-                              </div>
-                              <div class="col-2">
-                                  <span class="time">11:37</span>
-                              </div>
-                              <div class="col-7">
-                                  <span class="day-title">Day 1</span>
-                              </div>
-                              <div class="col-2">
-                                  <i class="bi bi-play-circle play-icon-Curriculum"></i>
-                              </div>
-                          </div>
-                          <div class="row video-item">
-                              <div class="col-1">
-                                  <i class="bi bi-lock-fill lock-icon-Curriculum"></i>
-                              </div>
-                              <div class="col-2">
-                                  <span class="time">11:37</span>
-                              </div>
-                              <div class="col-7">
-                                  <span class="day-title">Day 2</span>
-                              </div>
-                              <div class="col-2">
-                                  <i class="bi bi-play-circle play-icon-Curriculum"></i>
-                              </div>
-                          </div>
-                          <div class="row video-item">
-                              <div class="col-1">
-                                  <i class="bi bi-lock-fill lock-icon-Curriculum"></i>
-                              </div>
-                              <div class="col-2">
-                                  <span class="time">11:37</span>
-                              </div>
-                              <div class="col-7">
-                                  <span class="day-title">Day 3</span>
-                              </div>
-                              <div class="col-2">
-                                  <i class="bi bi-play-circle play-icon-Curriculum"></i>
-                              </div>
-                          </div>
-                          <div class="row video-item">
-                              <div class="col-1">
-                                  <i class="bi bi-lock-fill lock-icon-Curriculum"></i>
-                              </div>
-                              <div class="col-2">
-                                  <span class="time">11:37</span>
-                              </div>
-                              <div class="col-7">
-                                  <span class="day-title">Day 4</span>
-                              </div>
-                              <div class="col-2">
-                                  <i class="bi bi-play-circle play-icon-Curriculum"></i>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                <h2>Course Curriculum</h2>
+                <div class="curriculum-section">
+                    <div class="curriculum-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#newVideoList" aria-expanded="false" aria-controls="newVideoList">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-chevron-down chevron-Curriculum"></i>
+                            <span class="curriculum-title">Days Summer Challenge – All Messages 30</span>
+                        </div>
+                    </div>
+                    <div id="newVideoList" class="collapse">
+                        <div class="row new-video-item" data-day="1">
+                            <div class="col-1">
+                                <i class="bi bi-lock-fill lock-icon-Curriculum" id="lock1"></i>
+                            </div>
+                            <div class="col-2 ">
+                                <span class="time">11:37</span>
+                            </div>
+                            <div class="col-7">
+                                <span class="day-title">Day 1</span>
+                            </div>
+                            <div class="col-2">
+                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 1)"></i>
+                            </div>
+                        </div>
+                        <div class="row new-video-item" data-day="2">
+                            <div class="col-1">
+                                <i class="bi bi-lock-fill lock-icon-Curriculum" id="lock2"></i>
+                            </div>
+                            <div class="col-2">
+                                <span class="time">11:37</span>
+                            </div>
+                            <div class="col-7">
+                                <span class="day-title">Day 2</span>
+                            </div>
+                            <div class="col-2">
+                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 2)"></i>
+                            </div>
+                        </div>
+                        <div class="row new-video-item" data-day="3">
+                            <div class="col-1">
+                                <i class="bi bi-lock-fill lock-icon-Curriculum" id="lock3"></i>
+                            </div>
+                            <div class="col-2">
+                                <span class="time">11:37</span>
+                            </div>
+                            <div class="col-7">
+                                <span class="day-title">Day 3</span>
+                            </div>
+                            <div class="col-2">
+                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 3)"></i>
+                            </div>
+                        </div>
+                        <div class="row new-video-item" data-day="4">
+                            <div class="col-1">
+                                <i class="bi bi-lock-fill lock-icon-Curriculum" id="lock4"></i>
+                            </div>
+                            <div class="col-2">
+                                <span class="time">11:37</span>
+                            </div>
+                            <div class="col-7">
+                                <span class="day-title">Day 4</span>
+                            </div>
+                            <div class="col-2">
+                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 4)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
-      </div>
-  </div>
-</section>
+        </div>
+      </section>
+
+        
+            <!-- Video Modal -->
+            <div id="newVideoModal" class="new-video-modal d-none">
+                <div class="modal-content-new">
+                    <span class="close-new" onclick="hideNewVideoModal()">&times;</span>
+                    <iframe id="newVideoFrame" src="" frameborder="0" allowfullscreen style="width: 100%; height: 400px;"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Sample data for locked/unlocked state of videos
+            const videoStates = {
+                1: false,
+                2: true, 
+                3: false, 
+                4: true   
+            };
+        
+            function updateLockIcons() {
+                for (let day in videoStates) {
+                    const lockIcon = document.getElementById(`lock${day}`);
+                    if (videoStates[day]) {
+                        lockIcon.classList.remove('bi-lock-fill');
+                        lockIcon.classList.add('bi-unlock-fill');
+                        lockIcon.style.color = 'black'; // Unlocked color
+                    } else {
+                        lockIcon.classList.remove('bi-unlock-fill');
+                        lockIcon.classList.add('bi-lock-fill');
+                        lockIcon.style.color = 'gray'; // Locked color
+                    }
+                }
+            }
+        
+            function showNewVideoModal(videoUrl, day) {
+                const lockStatus = videoStates[day];
+                if (!lockStatus) {
+                    alert("This video is locked. Please unlock it to view.");
+                } else {
+                    const modal = document.getElementById("newVideoModal");
+                    const videoFrame = document.getElementById("newVideoFrame");
+                    videoFrame.src = videoUrl;
+                    modal.classList.remove("d-none");
+                }
+            }
+        
+            function hideNewVideoModal() {
+                const modal = document.getElementById("newVideoModal");
+                const videoFrame = document.getElementById("newVideoFrame");
+                videoFrame.src = "";
+                modal.classList.add("d-none");
+            }
+        
+            // Initialize lock icons based on the state
+            updateLockIcons();
+        </script>
+            
+            
 
 
-
- 
+          
 
 
 
