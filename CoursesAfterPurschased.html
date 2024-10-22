@@ -122,55 +122,57 @@
       
  
 
-  <!-- Video Section -->
+
+<!-- Section with Video Play Button -->
 <section class="container-fluid p-100 video-afterpur">
-    <div class="video-afterpur-sec">
-      <div class="overlay-AfterPurshased"data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
-        <div class="play-button-AfterPurshased" onclick="openVideoModal()">
-          <img src="/assets/images/vedio-icon.webp" alt="Play Button">
-        </div>
+  <div class="video-afterpur-sec">
+    <div class="overlay-AfterPurshased" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="10">
+      <div class="play-button-AfterPurshased" onclick="openVideoModal()">
+        <img src="/assets/images/vedio-icon.webp" alt="Play Button">
       </div>
     </div>
-  </section>
-  
-  <!-- Modal -->
-  <div class="modal-AfterPurshased" id="videoModal">
-    <div class="modal-content-AfterPurshased">
-      <span class="close-button-AfterPurshased" onclick="closeVideoModal()">&times;</span>
-      <iframe id="videoFrameAfterPur" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
   </div>
-  
+</section>
 
-  
+<!-- Modal for Video -->
+<div id="customVideoModal" class="modal-custom" style="display: none;">
+  <div class="modal-content-custom">
+    <!-- Close Button -->
+    <button class="btn-close-custom" onclick="closeVideoModal()">&times;</button>
+    <iframe id="customVideoFrame" src="" frameborder="0" allowfullscreen style="width: 100%; height: 400px;"></iframe>
+  </div>
+</div>
+
+
+
+
 
   
   <script>
-   document.addEventListener("DOMContentLoaded", function() {
-  var modal = document.getElementById("videoModal");
-  var videoFrameAfterPur = document.getElementById("videoFrameAfterPur");
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("customVideoModal");
+  const videoFrame = document.getElementById("customVideoFrame");
 
-  // Ensure the modal is hidden initially
-  modal.style.display = "none";
-
+  // Function to open the modal and load the video
   window.openVideoModal = function() {
-    if (modal.style.display === "none") { // Only open if not already visible
-        videoFrameAfterPur.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID"; 
-      modal.style.display = "flex";
-    }
+    videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID"; // Replace with your video ID
+    modal.style.display = "flex";
   };
 
+  // Function to close the modal and stop the video
   window.closeVideoModal = function() {
-    videoFrameAfterPur.src = "";
+    videoFrame.src = ""; // Clear video source to stop playing
     modal.style.display = "none";
   };
 
+  // Close modal when clicking outside of modal content
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
       closeVideoModal();
     }
   };
 });
+
 
 
   </script>
@@ -276,7 +278,7 @@
                                 <span class="day-title">Day 1</span>
                             </div>
                             <div class="col-2">
-                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 1)"></i>
+                                <i id="play-btn-1" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 1)"></i>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="2">
@@ -290,7 +292,7 @@
                                 <span class="day-title">Day 2</span>
                             </div>
                             <div class="col-2">
-                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 2)"></i>
+                                <i id="play-btn-2" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 2)"></i>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="3">
@@ -304,7 +306,7 @@
                                 <span class="day-title">Day 3</span>
                             </div>
                             <div class="col-2">
-                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 3)"></i>
+                                <i id="play-btn-3" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 3)"></i>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="4">
@@ -318,7 +320,7 @@
                                 <span class="day-title">Day 4</span>
                             </div>
                             <div class="col-2">
-                                <i class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 4)"></i>
+                                <i id="play-btn-4" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 4)"></i>
                             </div>
                         </div>
                     </div>
@@ -326,9 +328,8 @@
             </div>
           </div>
         </div>
-      </section>
 
-        
+            
             <!-- Video Modal -->
             <div id="newVideoModal" class="new-video-modal d-none">
                 <div class="modal-content-new">
@@ -336,54 +337,71 @@
                     <iframe id="newVideoFrame" src="" frameborder="0" allowfullscreen style="width: 100%; height: 400px;"></iframe>
                 </div>
             </div>
-        </div>
-        
-        <script>
-            // Sample data for locked/unlocked state of videos
-            const videoStates = {
-                1: false,
-                2: true, 
-                3: false, 
-                4: true   
-            };
-        
-            function updateLockIcons() {
-                for (let day in videoStates) {
-                    const lockIcon = document.getElementById(`lock${day}`);
-                    if (videoStates[day]) {
-                        lockIcon.classList.remove('bi-lock-fill');
-                        lockIcon.classList.add('bi-unlock-fill');
-                        lockIcon.style.color = 'black'; // Unlocked color
-                    } else {
-                        lockIcon.classList.remove('bi-unlock-fill');
-                        lockIcon.classList.add('bi-lock-fill');
-                        lockIcon.style.color = 'gray'; // Locked color
+            
+            <script>
+                // Sample data for locked/unlocked state of videos
+                const videoStates = {
+                    1: false,
+                    2: true, 
+                    3: false, 
+                    4: true   
+                };
+            
+                function updateLockIcons() {
+                    for (let day in videoStates) {
+                        const lockIcon = document.getElementById(`lock${day}`);
+                        if (videoStates[day]) {
+                            lockIcon.classList.remove('bi-lock-fill');
+                            lockIcon.classList.add('bi-unlock-fill');
+                            lockIcon.style.color = 'black'; // Unlocked color
+                        } else {
+                            lockIcon.classList.remove('bi-unlock-fill');
+                            lockIcon.classList.add('bi-lock-fill');
+                            lockIcon.style.color = 'gray'; // Locked color
+                        }
                     }
                 }
-            }
-        
-            function showNewVideoModal(videoUrl, day) {
-                const lockStatus = videoStates[day];
-                if (!lockStatus) {
-                    alert("This video is locked. Please unlock it to view.");
-                } else {
+            
+                function updatePlayButtons() {
+                    for (let day in videoStates) {
+                        const playButton = document.getElementById(`play-btn-${day}`);
+                        if (!videoStates[day]) {
+                           
+                            playButton.classList.add('disabled');
+                            playButton.style.pointerEvents = 'none'; 
+                            playButton.style.color = 'gray'; 
+                        } else {
+                            playButton.classList.remove('disabled');
+                            playButton.style.pointerEvents = 'auto'; 
+                            playButton.style.color = 'black'; 
+                        }
+                    }
+                }
+            
+                function showNewVideoModal(videoUrl, day) {
+                    const lockStatus = videoStates[day];
+                    if (!lockStatus) {
+                        alert("This video is locked. Please unlock it to view.");
+                    } else {
+                        const modal = document.getElementById("newVideoModal");
+                        const videoFrame = document.getElementById("newVideoFrame");
+                        videoFrame.src = videoUrl;
+                        modal.classList.remove("d-none");
+                    }
+                }
+            
+                function hideNewVideoModal() {
                     const modal = document.getElementById("newVideoModal");
                     const videoFrame = document.getElementById("newVideoFrame");
-                    videoFrame.src = videoUrl;
-                    modal.classList.remove("d-none");
+                    videoFrame.src = "";
+                    modal.classList.add("d-none");
                 }
-            }
-        
-            function hideNewVideoModal() {
-                const modal = document.getElementById("newVideoModal");
-                const videoFrame = document.getElementById("newVideoFrame");
-                videoFrame.src = "";
-                modal.classList.add("d-none");
-            }
-        
-            // Initialize lock icons based on the state
-            updateLockIcons();
-        </script>
+            
+                // Initialize lock icons and play buttons based on the state
+                updateLockIcons();
+                updatePlayButtons();
+            </script>
+            
             
             
 

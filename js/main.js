@@ -287,7 +287,6 @@ $(document).ready(function () {
   });
 });
 
-
 // Vedio Modal Home
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("videoModal");
@@ -315,7 +314,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
-
 
 /* Password */
 function togglePassword(fieldId) {
@@ -382,7 +380,9 @@ function hidePopup() {
 // Add event listener to the button
 document.getElementById("buy-now-btn").addEventListener("click", showPopup);
 
+// New Modal for Courses
 // Function to show the new modal
+/*
 function showNewVideoModal(videoUrl) {
   const modal = document.getElementById("newVideoModal");
   const videoFrame = document.getElementById("newVideoFrame");
@@ -393,7 +393,7 @@ function showNewVideoModal(videoUrl) {
   modal.classList.remove("d-none");
   setTimeout(() => modal.classList.add("show"), 10); // Delay for transition effect
 }
-
+*/
 // Function to hide the new modal
 function hideNewVideoModal() {
   const modal = document.getElementById("newVideoModal");
@@ -413,6 +413,3 @@ window.onclick = function (event) {
     hideNewVideoModal();
   }
 };
-
-
-
