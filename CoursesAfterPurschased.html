@@ -173,8 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 });
 
-
-
   </script>
 
 <section class="desc-inner-course">
@@ -271,14 +269,16 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div class="col-1">
                                 <i class="bi bi-lock-fill lock-icon-Curriculum" id="lock1"></i>
                             </div>
-                            <div class="col-2 ">
+                            <div class="col-2">
                                 <span class="time">11:37</span>
                             </div>
                             <div class="col-7">
                                 <span class="day-title">Day 1</span>
                             </div>
                             <div class="col-2">
-                                <i id="play-btn-1" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 1)"></i>
+                                <a href="CoursesVedio.html" target="_blank">
+                                    <i id="play-btn-1" class="bi bi-play-circle play-icon-Curriculum"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="2">
@@ -292,7 +292,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <span class="day-title">Day 2</span>
                             </div>
                             <div class="col-2">
-                                <i id="play-btn-2" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 2)"></i>
+                                <a href="CoursesVedio.html" target="_blank">
+                                    <i id="play-btn-2" class="bi bi-play-circle play-icon-Curriculum"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="3">
@@ -306,7 +308,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <span class="day-title">Day 3</span>
                             </div>
                             <div class="col-2">
-                                <i id="play-btn-3" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 3)"></i>
+                                <a href="CoursesVedio.html" target="_blank">
+                                    <i id="play-btn-3" class="bi bi-play-circle play-icon-Curriculum"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="row new-video-item" data-day="4">
@@ -320,92 +324,63 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <span class="day-title">Day 4</span>
                             </div>
                             <div class="col-2">
-                                <i id="play-btn-4" class="bi bi-play-circle play-icon-Curriculum" onclick="showNewVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 4)"></i>
+                                <a href="CoursesVedio.html" target="_blank">
+                                    <i id="play-btn-4" class="bi bi-play-circle play-icon-Curriculum"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-          </div>
         </div>
-
-            
-            <!-- Video Modal -->
-            <div id="newVideoModal" class="new-video-modal d-none">
-                <div class="modal-content-new">
-                    <span class="close-new" onclick="hideNewVideoModal()">&times;</span>
-                    <iframe id="newVideoFrame" src="" frameborder="0" allowfullscreen style="width: 100%; height: 400px;"></iframe>
-                </div>
-            </div>
-            
-            <script>
-                // Sample data for locked/unlocked state of videos
-                const videoStates = {
-                    1: false,
-                    2: true, 
-                    3: false, 
-                    4: true   
-                };
-            
-                function updateLockIcons() {
-                    for (let day in videoStates) {
-                        const lockIcon = document.getElementById(`lock${day}`);
-                        if (videoStates[day]) {
-                            lockIcon.classList.remove('bi-lock-fill');
-                            lockIcon.classList.add('bi-unlock-fill');
-                            lockIcon.style.color = 'black'; // Unlocked color
-                        } else {
-                            lockIcon.classList.remove('bi-unlock-fill');
-                            lockIcon.classList.add('bi-lock-fill');
-                            lockIcon.style.color = 'gray'; // Locked color
-                        }
-                    }
-                }
-            
-                function updatePlayButtons() {
-                    for (let day in videoStates) {
-                        const playButton = document.getElementById(`play-btn-${day}`);
-                        if (!videoStates[day]) {
-                           
-                            playButton.classList.add('disabled');
-                            playButton.style.pointerEvents = 'none'; 
-                            playButton.style.color = 'gray'; 
-                        } else {
-                            playButton.classList.remove('disabled');
-                            playButton.style.pointerEvents = 'auto'; 
-                            playButton.style.color = 'black'; 
-                        }
-                    }
-                }
-            
-                function showNewVideoModal(videoUrl, day) {
-                    const lockStatus = videoStates[day];
-                    if (!lockStatus) {
-                        alert("This video is locked. Please unlock it to view.");
-                    } else {
-                        const modal = document.getElementById("newVideoModal");
-                        const videoFrame = document.getElementById("newVideoFrame");
-                        videoFrame.src = videoUrl;
-                        modal.classList.remove("d-none");
-                    }
-                }
-            
-                function hideNewVideoModal() {
-                    const modal = document.getElementById("newVideoModal");
-                    const videoFrame = document.getElementById("newVideoFrame");
-                    videoFrame.src = "";
-                    modal.classList.add("d-none");
-                }
-            
-                // Initialize lock icons and play buttons based on the state
-                updateLockIcons();
-                updatePlayButtons();
-            </script>
-            
-            
-            
+    </div>
+ </div>
 
 
+            
+<script>
+  // Sample data for locked/unlocked state of videos
+const videoStates = {
+    1: false,
+    2: true,
+    3: false,
+    4: true   
+};
+
+function updateLockIcons() {
+    for (let day in videoStates) {
+        const lockIcon = document.getElementById(`lock${day}`);
+        if (videoStates[day]) {
+            lockIcon.classList.remove('bi-lock-fill');
+            lockIcon.classList.add('bi-unlock-fill');
+            lockIcon.style.color = 'black'; // Unlocked color
+        } else {
+            lockIcon.classList.remove('bi-unlock-fill');
+            lockIcon.classList.add('bi-lock-fill');
+            lockIcon.style.color = 'gray'; // Locked color
+        }
+    }
+}
+
+function updatePlayButtons() {
+    for (let day in videoStates) {
+        const playButton = document.getElementById(`play-btn-${day}`);
+        if (!videoStates[day]) {
+            playButton.classList.add('disabled');
+            playButton.style.pointerEvents = 'none'; 
+            playButton.style.color = 'gray'; 
+        } else {
+            playButton.classList.remove('disabled');
+            playButton.style.pointerEvents = 'auto'; 
+            playButton.style.color = 'black'; 
+        }
+    }
+}
+
+updateLockIcons();
+updatePlayButtons();
+
+</script>
           
 
 
