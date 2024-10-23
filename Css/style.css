@@ -334,7 +334,6 @@ input::-webkit-inner-spin-button {
 
 /* Hero */
 .hero-section {
-  background-image: url("/assets/images/heroBg.jpeg");
   background-size: cover;
   background-position: center;
   height: 650px;
@@ -1439,7 +1438,7 @@ input::-webkit-inner-spin-button {
   background-color: white;
   margin: 10px;
   text-align: center;
-  height: 500px !important;
+  height: 570px !important;
   justify-content: center;
 }
 
@@ -2183,9 +2182,10 @@ input::-webkit-inner-spin-button {
 /*-----------------------------------Course - Events - About Pages ------------------------------------*/
 
 .buy-img-card {
-  height: 200px;
+  height: 240px;
   border-radius: 12px 12px 0 0;
   width: 100%;
+  object-fit: cover;
 }
 .buy-now-section {
   padding-top: 6%;
@@ -3131,13 +3131,23 @@ form label {
   margin-top: 35px;
   margin-bottom: 15px;
 }
-
+.desc-inner-title-course {
+  color: #b74f80;
+  font-weight: 500;
+  font-size: 31px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
 .desc-inner-paragraph {
   font-size: 14px;
   font-weight: 400;
   color: #55674f;
 }
-
+.description-inner-book p {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
 .objectives-list,
 .highlights-list {
   list-style: none;
