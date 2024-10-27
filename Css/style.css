@@ -2313,7 +2313,7 @@ input::-webkit-inner-spin-button {
 
 .buy-now-desc {
   flex-grow: 1;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: #19191b;
   margin-bottom: 1rem;
@@ -2329,7 +2329,16 @@ input::-webkit-inner-spin-button {
 .buynow-see-details {
   margin-top: auto;
 }
-.buy-now-price {
+.buy-now-price,
+.original-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 0px;
+  text-align: center;
+  text-decoration: line-through;
+}
+.discounted-price {
   font-size: 24px;
   font-weight: 700;
   color: #810f40;
