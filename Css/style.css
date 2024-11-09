@@ -118,7 +118,11 @@ input::-webkit-inner-spin-button {
 }
 .p-165 {
   padding-left: 165px !important;
-  padding-right: 165px !important;
+  padding-right: 165x !important;
+}
+.p-250 {
+  padding-left: 250px !important;
+  padding-right: 250px !important;
 }
 .p-150 {
   padding-left: 150px !important;
@@ -665,9 +669,10 @@ input::-webkit-inner-spin-button {
 
 .card-courses img {
   width: 100%;
-  height: 410px;
+  height: 390px;
   border-radius: 10px;
   margin-bottom: 15px;
+  object-fit: fill;
 }
 
 .card-courses h3 {
@@ -1785,11 +1790,22 @@ input::-webkit-inner-spin-button {
 
 /* Footer Section */
 .footer-section {
+  background-color: #eff0eb;
+  margin-top: 70px;
+}
+.bg-footer {
+  background-color: #f9f9f9bd;
+}
+.footer-section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.background-footer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .footer-heading-contact h5 {
   text-align: left;
   font-size: 25px;
@@ -1803,9 +1819,10 @@ input::-webkit-inner-spin-button {
   font-weight: 400;
   color: #1b2617;
 }
-.phone-number {
-  color: #1b2617;
-  text-decoration: underline;
+.phone-container {
+  display: flex;
+  align-items: center;
+  direction: rtl;
 }
 
 .email-footer-icon {
@@ -2189,7 +2206,7 @@ input::-webkit-inner-spin-button {
   height: 240px;
   border-radius: 12px 12px 0 0;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .buy-now-section {
   padding-top: 6%;
@@ -2287,7 +2304,13 @@ input::-webkit-inner-spin-button {
   display: block;
   margin-top: 10px;
 }
-
+.buy-now-card-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .buy-now-card-body {
   display: flex;
   flex-direction: column;
@@ -2487,7 +2510,7 @@ html[dir="rtl"] .page-link-arrow:last-child img {
   border-radius: 24px;
   height: 500px;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .badge-custom {
@@ -2880,7 +2903,7 @@ html[dir="rtl"] .page-link-arrow:last-child img {
 }
 
 .blog-card img {
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
   height: 470px;
   border-radius: 16px, 16px, 0px, 0px;
@@ -3143,6 +3166,7 @@ form label {
   font-size: 28px;
   margin-top: 35px;
   margin-bottom: 15px;
+  text-align: right;
 }
 .desc-inner-title-course {
   color: #b74f80;
@@ -3208,7 +3232,7 @@ form label {
 .custom-img-innercourse {
   width: 215px;
   height: 215px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 10px;
 }
 .instructor-content {

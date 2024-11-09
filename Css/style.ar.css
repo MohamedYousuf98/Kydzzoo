@@ -1,0 +1,125 @@
+html[dir="rtl"] .card-courses h3,
+html[dir="rtl"] .card-courses p {
+  text-align: right;
+}
+html[dir="rtl"] .col-md-4.blog-header h2,
+html[dir="rtl"] .col-md-4.blog-header p,
+html[dir="rtl"] .col-md-4.blog-header a {
+  text-align: right;
+}
+html[dir="rtl"] .col-md-4.blog-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+html[dir="rtl"] .blog-title-img,
+html[dir="rtl"] .blog-date-img,
+html[dir="rtl"] .blog-read-more {
+  text-align: right;
+}
+html[dir="rtl"] .footer-container {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-logo a {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-heading,
+html[dir="rtl"] .footer-heading-contact h5 {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-link {
+  text-align: right;
+}
+
+html[dir="rtl"] .social-icons {
+  text-align: right;
+}
+
+html[dir="rtl"] .bottom-section {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-left-footer {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-center-footer {
+  text-align: center;
+}
+
+html[dir="rtl"] .text-right-footer {
+  text-align: left;
+}
+
+html[dir="rtl"] .footer-heading-contact {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-heading-contact p {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-heading-contact .phone-number,
+html[dir="rtl"] .footer-heading-contact .email-footer-icon {
+  display: inline-block;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-container .footer-logo,
+html[dir="rtl"] .footer-container .footer-heading-contact,
+html[dir="rtl"] .footer-container .col {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-container .social-icons {
+  direction: rtl;
+}
+
+html[dir="rtl"] .navbar-brand {
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar {
+  display: flex;
+  justify-content: flex-start;
+  direction: rtl;
+}
+
+html[dir="rtl"] .footer-heading-contact img {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.forget-reset-pass h2,
+.forget-reset-pass p {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .forget-reset-pass h2,
+html[dir="rtl"] .forget-reset-pass p {
+  direction: rtl;
+  text-align: right;
+}
+
+.signin-form h2,
+.signin-form p {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .signin-form h2,
+html[dir="rtl"] .signin-form p {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .signup-form h2,
+html[dir="rtl"] .signup-form p {
+  direction: rtl;
+  text-align: right;
+}
